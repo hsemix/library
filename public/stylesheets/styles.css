@@ -1,0 +1,11 @@
+.app-container {
+    border: 1px solid #333;
+}
+
+.submit-btn {
+    margin-bottom: 4px;
+}
+
+.hidden {
+    display: none;
+}
