@@ -27,6 +27,38 @@ router.post('/', async (req, res, next) => {
   // validate every field accordingly
   
   let username = req.body.username;
+  let password = req.body.password;
+
+  if (username !== "" && password !== "") {
+
+    let user = {
+      username:   username,
+      password:   md5(password),
+    };
+    var queryUser = await connection.query("SELECT * FROM `users` WHERE `email` = ? or `username` = ? LIMIT 1", [user.username, user.username]);
+    if (queryUser.length > 0) {
+      if (user.password == queryUser[0].password) {
+        // login the user
+        return res.redirect("/home");
+      } else {
+        return res.send({ app_status: false, message: "Wrong Username / or and Password combination" });
+      }
+    } else {
+      return res.send({ app_status: true, message: "User doesn't exist" });
+    }
+
+
+  } else {
+    // return an error { app_status: false, message: 'some message' }
+    return res.send({ app_status: false, message: 'All fields are required to proceed!' });
+  }
+});
+
+router.post('/register', async (req, res, next) => {
+
+  // validate every field accordingly
+  
+  let username = req.body.username;
   let firstname = req.body.firstname;
   let lastname = req.body.lastname;
   let email = req.body.email;
