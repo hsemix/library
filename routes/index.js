@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'library',
+  database: 'movie_library',
 });
 connection.connect();
 
@@ -99,6 +99,14 @@ router.post('/register', async (req, res, next) => {
     // return an error { app_status: false, message: 'some message' }
     return res.send({ app_status: false, message: 'All fields are required to proceed!' });
   }
+});
+
+
+router.get('/user/new', (req, res, next) => {
+  return res.render('register.html', { 
+    title: 'Library',
+    page: 'Register',
+  });
 });
 
 module.exports = router;
