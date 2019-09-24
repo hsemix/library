@@ -106,11 +106,15 @@ router.post('/register', async (req, res, next) => {
 
 
 router.get('/user/new', (req, res, next) => {
-  return res.render('register.html', { 
-    title: 'Library',
-    page: 'Register',
-    user: req.session.auth_user
-  });
+  if (req.session.loggedin) {
+    return res.render('register.html', { 
+      title: 'Library',
+      page: 'Register',
+      user: req.session.auth_user
+    });
+  } else {
+    res.redirect('/');
+  }
 });
 
 router.post('/user/new', async (req, res, next) => {
