@@ -220,6 +220,6 @@ body {
   border: 1px solid red;
 } */
 .panel-body > .row > div {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* margin: 2px; */
 }

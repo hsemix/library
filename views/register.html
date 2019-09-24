@@ -7,4 +7,58 @@
             </ol>
         </div>
     </section>
+    <section id="main">
+        <div class="container" style="width:1300px;">
+          <div class="row">
+            <%- include('fragments/left.html'); -%>
+            
+            <!-- main section that changes starts -->
+            <div class="col-md-9" id="main-content">
+                <div class="panel panel-default">
+                    <div class="panel-heading main-color-bg">
+                        <h3 class="panel-title">Register Admin</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="alert alert-success">Success Message</div>
+                                    <form action="" method="post">
+                                        <div class="form-group">
+                                            <label for="full_name">Full Name</label>
+                                            <input type="text" name="full_name" class="form-control" placeholder="Admin Full Name" id="" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="username">Username</label>
+                                            <input type="text" name="username" class="form-control" placeholder="Username" id="" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="text" name="email" class="form-control" placeholder="Email" id="" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone</label>
+                                            <input type="text" name="phone" class="form-control" placeholder="phone" id="phone" value="" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" name="password" class="form-control" placeholder="password" id="password">
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password_confirmation">Password Confirmation</label>
+                                            <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation" id="password_confirmation">
+                                        </div>
+                                        <input type="submit" class="btn btn-primary col-sm-12" value="Save" />
+                                    </form>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>      
+            </div>
+            <!-- main section that changes stops -->
+            
+          </div>
+        </div>
+    </section>
 <%- include('fragments/footer.html'); -%>
