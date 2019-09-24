@@ -20,41 +20,47 @@
                     </div>
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-sm-12">
-                                <div class="alert alert-success">Success Message</div>
-                                    <form action="" method="post">
-                                        <div class="form-group">
-                                            <label for="full_name">Full Name</label>
-                                            <input type="text" name="full_name" class="form-control" placeholder="Admin Full Name" id="" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="username">Username</label>
-                                            <input type="text" name="username" class="form-control" placeholder="Username" id="" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <input type="text" name="email" class="form-control" placeholder="Email" id="" value="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="phone">Phone</label>
-                                            <input type="text" name="phone" class="form-control" placeholder="phone" id="phone" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password">Password</label>
-                                            <input type="password" name="password" class="form-control" placeholder="password" id="password">
-                                            
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password_confirmation">Password Confirmation</label>
-                                            <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation" id="password_confirmation">
-                                        </div>
-                                        <input type="submit" class="btn btn-primary col-sm-12" value="Save" />
-                                    </form>
-                                </div>
-                              </div>
-                              
+                            <div class="col-sm-12 form-container">
+                            
+                                <form action="/user/new" method="post" onsubmit="Library.Forms.submitForm(this); return false;">
+                                    <div class="form-group">
+                                        <label for="first_name">First Name</label>
+                                        <input type="text" name="first_name" class="form-control" placeholder="Admin First Name" id="first_name" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last_name">Last Name</label>
+                                        <input type="text" name="last_name" class="form-control" placeholder="Admin Last Name" id="last_name" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="username" class="form-control" placeholder="Username" id="username" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" name="email" class="form-control" placeholder="Email" id="email" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" name="phone" class="form-control" placeholder="phone" id="phone" value="" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" class="form-control" placeholder="password" id="password">
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password_confirmation">Password Confirmation</label>
+                                        <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation" id="password_confirmation">
+                                    </div>
+                                    <input type="submit" class="btn btn-primary col-sm-12" value="Save" />
+                                    <div class="clearfix"></div><br />
+                                    <div class="alert hidden">Success Message</div>
+                                </form>
                             </div>
-                          </div>      
+                        </div>
+                            
+                    </div>
+                </div>      
             </div>
             <!-- main section that changes stops -->
             
